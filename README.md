@@ -64,8 +64,10 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/pepabo
 
 ## Author
 
-[GMO Pepabo, Inc.](https://pepabo.com/)
+[Kentaro Kuribahyashi](https://kentarok.org/)
 
 ## License
+
+Copyright (c) 2017 [GMO Pepabo, Inc.](https://pepabo.com/)
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).

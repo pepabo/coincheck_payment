@@ -6,12 +6,12 @@ require 'coincheck_payment/version'
 Gem::Specification.new do |spec|
   spec.name          = "coincheck_payment"
   spec.version       = CoincheckPayment::VERSION
-  spec.authors       = ["Kentaro Kuribayashi"]
-  spec.email         = ["kentarok@gmail.com"]
+  spec.authors       = ["GMO Pepabo, Inc.", "Kentaro Kuribayashi"]
+  spec.email         = ["antipop@pepabo.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Ruby implementation of Coincheck Payment API client.}
+  spec.description   = %q{Ruby implementation of Coincheck Payment API client.}
+  spec.homepage      = "https://github.com/pepabo/coincheck_payment"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'

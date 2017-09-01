@@ -1,3 +1,3 @@
-module CoincheckPayment
+class CoincheckPayment
   VERSION = "0.1.0"
 end

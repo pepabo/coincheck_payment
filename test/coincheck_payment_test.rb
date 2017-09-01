@@ -5,7 +5,8 @@ class CoincheckPaymentTest < Minitest::Test
     refute_nil ::CoincheckPayment::VERSION
   end
 
-  def test_it_does_something_useful
-    assert false
+  def test_payment_button
+    cc = CoincheckPayment.new("API KEY", "API SECRET")
+    assert !cc.nil?
   end
 end

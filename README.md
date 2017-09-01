@@ -1,4 +1,4 @@
-# Coincheck::Payment
+# CoincheckPayment
 
 Ruby implementation of Coincheck Payment API client.
 
@@ -27,7 +27,7 @@ First, you should retrieve a payment button.
 ```ruby
 require 'coincheck_payment'
 
-cc = CoinCheck::Payment.new("YOUR API KEY", "YOUR API SECRET")
+cc = CoincheckPayment.new("YOUR API KEY", "YOUR API SECRET")
 
 ## Retrieve a button for payment
 button = cc.payment_button(params)

@@ -1,8 +1,6 @@
-# CoincheckPayment
+# Coincheck::Payment
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/coincheck_payment`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Ruby implementation of Coincheck Payment API client.
 
 ## Installation
 
@@ -22,7 +20,37 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Retrieval of Payment Button
+
+First, you should retrieve a payment button. 
+
+```ruby
+require 'coincheck_payment'
+
+cc = CoinCheck::Payment.new("YOUR API KEY", "YOUR API SECRET")
+
+## Retrieve a button for payment
+button = cc.payment_button(params)
+```
+
+### Handling a Request to Callback URL
+
+The API sends request(s) to the callback URL you set in `callback_url` field of the request above to notify transaction status. The status can be one of below.
+
+  1. User just paid but the transaction is not confirmed
+  2. The transaction is confirmed in the Bitcoin network
+
+```ruby
+# ...
+```
+
+### Handling a Payment Error
+
+The API sends a request to the callback URL you set in `notify_mispayment` field of the request above to notify a transaction error.
+
+```ruby
+# ...
+```
 
 ## Development
 
@@ -32,10 +60,12 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/coincheck_payment.
+Bug reports and pull requests are welcome on GitHub at https://github.com/pepabo/coincheck_payment.
 
+## Author
+
+[GMO Pepabo, Inc.](https://pepabo.com/)
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-

@@ -62,6 +62,10 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/pepabo/coincheck_payment.
 
+## See Also
+
+[Coincheck Payment API](https://coincheck.com/ja/documents/payment/api)
+
 ## Author
 
 [Kentaro Kuribahyashi](https://kentarok.org/)

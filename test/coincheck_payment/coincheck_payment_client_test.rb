@@ -1,9 +1,24 @@
 require 'test_helper'
 
-class CoincheckPaymentTest < Minitest::Test
-  def test_payment_button
+class CoincheckPaymentClientTest < Minitest::Test
+  def test_initialize
     cc = CoincheckPayment::Client.new("API KEY", "API SECRET")
     assert_instance_of CoincheckPayment::Client, cc
+  end
+
+  def test_payment_button
+    stub_request(:post, "https://coincheck.com/api/ec/buttons").to_return(
+      body: %q|{"success":true, "button":{"name":"test"}}|,
+      status: 200,
+    )
+
+    cc = CoincheckPayment::Client.new("API KEY", "API SECRET")
+    res = cc.payment_button({"foo":"bar"})
+
+    assert_instance_of CoincheckPayment::Response, res
+    assert_equal "200", res.code
+    assert_equal true, res.success?
+    assert_equal({"name" => "test"}, res.button)
   end
 
   def test_generate_header

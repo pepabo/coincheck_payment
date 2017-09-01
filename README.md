@@ -30,6 +30,7 @@ require 'coincheck_payment'
 client = CoincheckPayment::Client.new("YOUR API KEY", "YOUR API SECRET")
 
 ## Retrieve a button for payment
+params = { ... }
 button = client.payment_button(params)
 ```
 

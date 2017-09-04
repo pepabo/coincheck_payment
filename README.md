@@ -20,10 +20,6 @@ Or install it yourself as:
 
 ## Usage
 
-### Retrieval of Payment Button
-
-First, you should retrieve a payment button. 
-
 ```ruby
 require 'coincheck_payment'
 
@@ -32,25 +28,6 @@ client = CoincheckPayment::Client.new("YOUR API KEY", "YOUR API SECRET")
 ## Retrieve a button for payment
 params = { ... }
 button = client.payment_button(params)
-```
-
-### Handling a Request to Callback URL
-
-The API sends request(s) to the callback URL you set in `callback_url` field of the request above to notify transaction status. The status can be one of below.
-
-  1. User just paid but the transaction is not confirmed
-  2. The transaction is confirmed in the Bitcoin network
-
-```ruby
-# ...
-```
-
-### Handling a Payment Error
-
-The API sends a request to the callback URL you set in `notify_mispayment` field of the request above to notify a transaction error.
-
-```ruby
-# ...
 ```
 
 ## Development
